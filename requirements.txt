@@ -1,0 +1,16 @@
+torch>=1.7
+torchvision
+numpy
+opencv-python
+scikit-learn
+tqdm
+PyYAML
+einops
+timm
+flask
+sqlalchemy
+pillow
+# Optional for notebooks
+jupyter
+# Optional for video models
+decord
