@@ -38,24 +38,36 @@ Key components of the WatchTower (S3R based) model include:
 The model checkpoint used is typically one like 'ucf-crime_s3r_i3d_best.pth', trained specifically for the UCF-Crime dataset using I3D features. [cite: 34]
 
 ## Project Structure
+.
 ├── ml_models/            # Machine learning model implementations
-│   ├── init.py
-│   └── s3r_model.py      # S3R model implementation (WatchTower)
+│   ├── __init__.py      
+│   └── s3r_model.py      # WatchTower (S3R) model implementation
 ├── static/               # Static files (JS, CSS, images, sounds)
 │   ├── css/
+│   │   └── custom.css   
 │   ├── js/
-│   └── sounds/
+│   │   ├── anomaly-display.js
+│   │   ├── main.js        
+│   │   └── video-buffer.js
+│   └── sounds/           # Directory for alert sounds (if any)
 ├── templates/            # HTML templates
-├── dictionary/           # Dictionary files for S3R model (e.g., ucf-crime_dictionaries.taskaware.omp.100iters.50pct.npy)
+│   ├── home.html        
+│   ├── layout.html      
+│   └── surveillance.html
+├── dictionary/           # Dictionary files for WatchTower model (e.g., ucf-crime_dictionaries.taskaware.omp.100iters.50pct.npy)
 ├── checkpoint/           # Model checkpoint files (e.g., ucf-crime_s3r_i3d_best.pth)
 ├── app.py                # Flask application setup
 ├── main.py               # Entry point for the application
-├── ml_model.py           # ML model wrapper and anomaly detection logic
+├── ml_model.py           # ML model wrapper, anomaly detection logic, thresholding
 ├── models.py             # Database models (SQLAlchemy)
 ├── routes.py             # Application routes
 ├── utils.py              # Utility functions
 ├── video_processor.py    # Video processing utilities
-└── create_dictionary.py  # Script to create dictionary files (if applicable)
+├── create_dictionary.py  # Script to create dictionary files (if applicable)
+├── requirements.txt      # Project dependencies
+├── README.md             # This file
+└── USAGE.md              # Instructions on how to use the application
+
 
 ## Datasets
 
